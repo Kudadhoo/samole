@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+ {% block content %}
+
+
+    <h1>Posts</h1>
+
+
+
+{{dp.title}}
+ <a href="{% url 'like_post' dp.id %}" class="btn btn-primary">Like</a>
+        {{dp.likes}}
+<!--<form action="" method="POST">-->
+<!--{% csrf_token %}-->
+
+<!--{% if msg %}-->
+<!--<button>-->
+<!--<button type="button" class="btn btn-primary">Primary</button>-->
+<!--</button>-->
+
+<!--{% else %}-->
+<!--<button>-->
+<!--<button type="button" class="btn btn-success">Success</button>-->
+<!--</button>-->
+
+<!--{% endif %}-->
+
+
+
+</form>
+
+
+
+
+
+
+{% endblock %}

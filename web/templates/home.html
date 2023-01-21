@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+ {% block content %}
+
+
+    <h1>Posts</h1>
+    <ul>
+
+    <li>
+        {% for post in post %}
+        <a href="{% url 'like_post' post.id %}" class="btn btn-primary">Like</a>
+
+        {{post.title}}- <a href="{% url 'details' post.id %}">more</a>
+        {% for user in post.likes.all %}
+        {{user.username}}
+           {% endfor %}
+
+
+         {% endfor %}
+
+
+</li>
+
+
+</ul>
+
+
+{% endblock %}
